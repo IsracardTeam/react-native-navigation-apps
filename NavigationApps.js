@@ -220,7 +220,7 @@ class NavigationApps extends Component {
         const renderActionSheetOpenBtn = () => {
             const {actionSheetBtnOpenStyle, actionSheetBtnOpenTitle, actionSheetBtnOpenTextStyle, disable} = this.props;
             return (
-                <TouchableOpacity style={actionSheetBtnOpenStyle}
+                <TouchableOpacity disabled={disable} style={actionSheetBtnOpenStyle}
                                   onPress={() => disable ? null : this.actionSheetRef.show()}>
                     <Text style={actionSheetBtnOpenTextStyle}>{actionSheetBtnOpenTitle}</Text>
                 </TouchableOpacity>
